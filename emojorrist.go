@@ -25,7 +25,7 @@ func main() {
 			ref := slack.NewRefToMessage(ev.Channel, ev.Timestamp)
 			err := api.AddReaction(emoji, ref)
 			if err != nil {
-				log.Fatal(err)
+				log.Println(err)
 			}
 		}
 	}
