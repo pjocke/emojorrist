@@ -84,7 +84,7 @@ func main() {
 
 			words := strings.Fields(ev.Text)
 			for _, word := range words {
-				word = strings.Trim(strings.ToLower(word), ".!?")
+				word = strings.Trim(strings.ToLower(word), ".,:;!?")
 				if emoji, ok := matches[word]; ok {
 					fmt.Printf("match: %s = %s\n", word, emoji)
 					err := api.AddReaction(emoji, ref)
